@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "usync"
+version = "0.3.0"
+description = "Sync university course resources from Canvas, Ed, and Echo360 into organised local archives"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Rajdip Shah" }]
+keywords = ["education", "canvas", "edstem", "echo360", "cli", "sync"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Education",
+]
+dependencies = [
+    "requests>=2.31,<3",
+    "PyYAML>=6,<7",
+    "beautifulsoup4>=4.12,<5",
+    "python-dotenv>=1,<2",
+]
+
+[project.optional-dependencies]
+browser = ["playwright>=1.45,<2"]
+dev = ["pytest>=8,<10"]
+
+[project.scripts]
+usync = "usync:main"
+
+[project.urls]
+Repository = "https://github.com/Its-Rajdip-Shah/USYNC"
+Issues = "https://github.com/Its-Rajdip-Shah/USYNC/issues"
+
+[tool.setuptools]
+py-modules = ["usync"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
