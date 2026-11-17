@@ -1,0 +1,22 @@
+# Copy to config.yaml and customize this file for your institution and semester.
+active_semester: S2_2026
+
+semesters:
+  S2_2026:
+    calendar_year: 2026
+    calendar_semester: 2
+    units: [] # Example: [SOFT2201, SOFT2412]
+
+canvas:
+  base_url: https://canvas.sydney.edu.au
+
+browser:
+  headless: true
+
+ed:
+  browser_discovery: true
+  workspaces: {}
+
+echo360:
+  enabled: true
+  launch_urls: {}

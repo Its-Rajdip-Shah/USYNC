@@ -1,0 +1,32 @@
+# Credentials, browser authentication, user config
+/tokens.env
+/config.yaml
+/.usync-browser/
+/.usync-browser-state.json
+*.har
+*.env
+!.env.example
+
+# Downloaded course content (may be copyrighted and contain private grades)
+**/latest_dump/
+**/.previous_dump/
+**/*.zip
+**/.cache/
+
+# Environments and Python build/test artifacts
+/.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.whl
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/
